@@ -61,9 +61,6 @@ int main() {
     scanf("%f", &pib1);
     
     
-      
-
-    
     printf("Dados da Carta 1 cadastrada \n");
     printf("O Nome da cidade É: %d\n", nome_ciade);
     printf("O Código da cidade: %d\n", codigo_cidade);
