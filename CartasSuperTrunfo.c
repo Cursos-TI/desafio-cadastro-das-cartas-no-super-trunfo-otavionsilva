@@ -5,15 +5,15 @@ int main() {
     printf("***Super Trunfo!!***\n");
     // variáveis carta 0
     char numero_estado[3] = "01", estado_carta[50] = "SP";
-    unsigned long int populacao = 1948626;
+    unsigned long int populacao = 1948626, pib_per_capita, densidade_populacional;
     int pontos_turisticos = 80;
-    float area = 435.00, pib = 122000000000.00, densidade_populacional, pib_per_capita;
+    float area = 435.00, pib = 122000000000.00, super_poder;
 
     // variáveis carta 1
     char numero_estado1[3] = "02", estado_carta1[50] = "BH";
-    unsigned long int populacao1 = 2521564;
+    unsigned long int populacao1 = 2521564, pib_per_capita1, densidade_populacional1;
     int pontos_turisticos1 = 95;
-    float area1 = 330.90, pib1 = 133000000000.00, densidade_populacional1, pib_per_capita1;
+    float area1 = 330.90, pib1 = 133000000000.00, super_poder1;
     
 
     // Cidade 1
@@ -63,7 +63,11 @@ int main() {
     densidade_populacional1 = (float) populacao1 / area1;
     pib_per_capita1 = pib1 / populacao1;
     
-    
+    //Calculo do Super Poder
+    super_poder = (float) populacao + pontos_turisticos + area + pib + pib_per_capita;
+    super_poder1 = (float) populacao1 + pontos_turisticos1 + area1 + pib1 + pib_per_capita1;
+
+
     // Imprime os valores da carta 0
     printf("\n\n\n***Cidade 1***");
     printf("Dados da Carta 1 cadastrada \n");
@@ -89,6 +93,15 @@ int main() {
     printf("A densidade populacional é: %.2f\n", densidade_populacional1);
     printf("O PIB Per Capita da cidade é: %.2f\n", pib_per_capita1); 
     
-   
+    //Comparação 
+    printf("%.2f", super_poder);
+    printf("%.2f", super_poder1);
+    //
+
+
+
+
+
+
     return 0;
 }
